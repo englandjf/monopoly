@@ -6,9 +6,9 @@
 class gameboard
 {
  public:
-  gameboard();
+  gameboard(std::string);
  private:
-  std::string playername;
+  std::string playerName;
   std::vector<int>tile;
 };
 

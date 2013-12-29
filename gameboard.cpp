@@ -5,6 +5,8 @@
 
 using namespace std;
 
-gameboard::gameboard()
+gameboard::gameboard(string temp)
 {
+  playerName = temp;
+  cout << "Hello " << playerName << endl;
 }
