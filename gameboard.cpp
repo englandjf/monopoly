@@ -1,5 +1,7 @@
 #include<iostream>
 #include<vector>
+#include<ctime>
+#include<cstdlib>
 #include"tile.h"
 #include"gameboard.h"
 //#include"tile.h"
@@ -8,6 +10,9 @@ using namespace std;
 
 gameboard::gameboard(string temp)
 {
+  //Set Player starting position
+  playerLocation = 0;
+  //Set Player name
   playerName = temp;
   cout << "Hello " << playerName << endl;
   //Declare each tile
@@ -60,4 +65,31 @@ gameboard::gameboard(string temp)
   tile[37]->setKind("h1");
   tile[38]->setKind("lt");
   tile[39]->setKind("h2");
+  gameControl();
+}
+
+void gameboard::gameControl()
+{
+  for(int i = 0; i <= 10;i++)
+  playerMove(playerLocation);
+}
+
+void gameboard::playerMove(int currentLocation)
+{
+  cout << "Current Location: " << currentLocation << endl;
+  srand(time(NULL));
+  int moveAmount(0);
+  moveAmount = rand() % 11 + 2;
+  cout << "Roll: " <<  moveAmount << endl;
+  if(moveAmount + playerLocation > 39)
+    {
+      cout << "Over" << endl;
+      playerLocation+=moveAmount;
+      playerLocation-=40;
+    }
+  else
+    playerLocation += moveAmount;
+  
+  cout << "New Location: " << playerLocation << endl;
+  cout << tile[playerLocation]->getKind() << endl;
 }

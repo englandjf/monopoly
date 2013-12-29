@@ -6,6 +6,7 @@ class tileType
  public:
   tileType();
   void setKind(std::string);
+  std::string getKind();
  private:
   std::string kind;
 };

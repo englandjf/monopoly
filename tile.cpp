@@ -11,3 +11,8 @@ void tileType::setKind(string temp)
 {
   kind = temp;
 }
+
+string tileType::getKind()
+{
+  return kind;
+}
