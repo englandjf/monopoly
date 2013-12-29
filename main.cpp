@@ -1,8 +1,11 @@
 #include<iostream>
+#include"gameboard.h"
 
 using namespace std;
 
 string getName();
+
+
 
 int main()
 {
