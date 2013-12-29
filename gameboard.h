@@ -2,14 +2,13 @@
 #define GAMEBOARD_H
 
 
-
 class gameboard
 {
  public:
   gameboard(std::string);
  private:
   std::string playerName;
-  std::vector<int>tile;
+  std::vector<class tileType*>tile;
 };
 
 

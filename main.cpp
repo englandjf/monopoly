@@ -10,8 +10,7 @@ string getName();
 
 int main()
 {
-  getName();
-  
+  gameboard mainGame(getName());
 }
 
 string getName()

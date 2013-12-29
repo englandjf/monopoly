@@ -1,11 +1,13 @@
 #ifndef TILE_H
 #define TILE_H
 
-class tile
+class tileType
 {
  public:
+  tileType();
+  void setKind(std::string);
  private:
-
+  std::string kind;
 };
 
 

@@ -1,0 +1,9 @@
+#include<iostream>
+#include"tile.h"
+
+using namespace std;
+
+void tileType::setKind(string temp)
+{
+  kind = temp;
+}
